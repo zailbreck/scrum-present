@@ -12,12 +12,105 @@
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<style>
+			.blink {
+			  animation: blink-animation 2s steps(5, start) infinite;
+			  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+			}
+			@keyframes blink-animation {
+			  to {
+				visibility: hidden;
+			  }
+			}
+			@-webkit-keyframes blink-animation {
+			  to {
+				visibility: hidden;
+			  }
+			}
+			section.size{
+				top: 209.5px;
+				display: block;
+				left: -85px;
+			}
+			.cards{
+				display: flex;
+			}
+			.text-card{
+
+				margin-top: 150px;
+			}
+			.text-card1{
+
+				padding: 20px;
+				font-size: 25px;
+				text-align: center;
+				margin-bottom: auto;
+				margin-top: 50px;
+				margin-left: 270px;
+				margin-right: -260px;
+			}
+		 	h1.tanya{
+				margin-left: auto;
+				font-size: 40px;
+				margin-top: 15px ;
+			}
+			img.kok{
+				margin-top: -45px;
+			}
+	
+			</style>
 	</head>
 	<body>
 		<div class="reveal">
+			
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				
+				<section data-background-color="rgb(255, 60, 0)" data-auto-animate>
+					<h1 style="color: white;">SVELTE</h1>
+				</section>
+				<section data-background-color="rgb(255, 60, 0)" data-auto-animate>
+					<h1 style="color: white">SVELTE</h1>
+					<img src="SVELTE.png" >
+				</section>
+				<section data-background-color="rgb(255, 60, 0)" data-transition="zoom-in slide-out" data-auto-animate>
+					<h1 style="font-weight: bold; color: whitesmokes; text-shadow: 5px 7px 4px black" class="r-fit-text">KELOMPOK 3</h1>
+					<br>
+				</section>
+				<section data-background-color="rgb(255, 60, 0)" data-auto-animate>
+					<h1 style="font-weight: bold; font-size: 150px; color: rgba(48, 44, 44, 0.329);" >KELOMPOK 3</h1>
+					<br>
+					<p class="fragment fade-up">Muhammad Naufal</p>
+					<p class="fragment fade-down">Anggara Habib</p>
+					<p class="fragment fade-right">Franscesco Edgar Manuel Sembiring</p>
+				</section>
+				<section class="size" data-background-color="rgb(255, 60, 0)" data-transition="zoom">
+					<div class="cards">
+						<div class="text-card" >
+							<h1 class="blink" style="text-shadow: 5px 7px 4px black">What SVELTE ?</h1>
+						</div>
+						<div class="text-card1">
+							<p class="fragment fade-up" style="color:white;">Svelte dirilis pada tahun 2016 yang dibuat oleh Rich Harris. Svelte Ini digunakan oleh perusahaan seperti The New York Times, Avast, Spotify, dan Semrush.</p>
+							<p class="fragment fade-left" style="color:white;">Di situs resminya Svelte bukan hanya sekedar framework tapi lebih dari itu. Menurutnya Svelte adalah semacam compiler, kode yang kita tulis di Svelte dikonversi menjadi JavaScript yang sudah dioptimasi.</p>
+							<p class="fragment fade-right"> Dalam Survei 2020, 86% pengembang menyatakan kepuasan mereka dalam bekerja dengan Svelte. Dalam survei terbaru yang disiapkan oleh Stack Overflow pada tahun 2021, Svelte dipilih sebagai framework yang paling disukai oleh 71,42% responden, mengungguli React (69,28%) dan Vue (64,41%). </p>
+						</div>
+					</div>
+				</section>
+				<section data-transition="zoom"  data-background-color="rgb(255, 60, 0)">
+					<section><h1 class="tanya"  style="text-shadow: 5px 7px 4px black">Lalu apa yang membedakan Svelte dengan framework seperti React, Vue, dan Angular ???</h1>
+					<img class="kok" src="kokbisa.gif" ></section>
+					<section  data-background-color="rgb(255, 60, 0)">
+						<p>Perbedaan nya adalah ketiganya menggunakan virtual DOM, sedangkan Svelte tidak. Semua reactivity di Svelte adalah real DOM seperti jQuery. Tapi tentu saja berbeda dengan jQuery yang memiliki size sekitar 90 kb hanya untuk librarynya. Begitu pula dengan Vue yang memakan sekitar 90 kb untuk core frameworknya. Kalau di Svelte, 90 kb sudah jadi aplikasi yang lengkap. Bahkan, sudah memiliki banyak halaman.</p>
+					</section>
+				</section>
+				
+				<section  data-background-color="rgb(255, 60, 0)">
+					<section><h1 class="tanya"  style="text-shadow: 5px 7px 4px black"> Mengapa hal itu bisa terjadi dengan Svelte? Apa yang membuat itu bisa terjadi?</h1>
+					<img src="bertanya.gif" ></section>
+					<section>
+						<p>Mengapa bisa terjadi demikian, karena Svelte tidak mengincludekan core frameworknya melainkan mengubah file-file Svelte dan file-file Javascript yang dibuat itu ke dalam bundle.js dengan seoptimal mungkin dan memiliki ukuran yang sangat kecil.</p>
+					</section>
+				</section>
+
 			</div>
 		</div>
 
@@ -35,6 +128,10 @@
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
 			});
+		
+			
+		
+		
 		</script>
 	</body>
 </html>
