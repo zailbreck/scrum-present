@@ -13,6 +13,9 @@
 3. kelebihan dan kekurangan svelte
 4. Contoh Code svelte dengan react
 
+## Documentation
+The full reveal.js documentation is available at [revealjs.com](https://revealjs.com).
+
 ## License
 
 MIT licensed
