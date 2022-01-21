@@ -16,7 +16,6 @@
 ## Documentation
 The full reveal.js documentation is available at [revealjs.com](https://revealjs.com).
 
-
 ## License
 
 MIT licensed

@@ -17,30 +17,73 @@
 			  animation: blink-animation 2s steps(5, start) infinite;
 			  -webkit-animation: blink-animation 1s steps(5, start) infinite;
 			}
+
 			@keyframes blink-animation {
 			  to {
 				visibility: hidden;
 			  }
 			}
+
 			@-webkit-keyframes blink-animation {
 			  to {
 				visibility: hidden;
 			  }
 			}
+
 			section.size{
 				top: 209.5px;
 				display: block;
 				left: -85px;
 			}
+
 			.cards{
 				display: flex;
 			}
-			.text-card{
 
+			.card-block {
+				display: flex; /* or inline-flex */
+				flex-wrap: wrap;
+				width: 120%;
+				margin-top: 40px;
+				justify-content: space-evenly;
+				border-radius: 10px;
+			}
+
+			.card-block:nth-child(odd) {
+				margin-left: -50px;
+			}
+			.card-block:nth-child(even) {
+				margin-left: 50px;
+			}
+
+			.code-blockL:nth-child(odd) {
+				margin-left: -50px;
+			}
+			
+
+			.card-block .code-block {
+				flex-grow: 0;
+				flex-shrink: 0;
+				width: 110%;
+				box-shadow: -2px -1px 5px 0px #efefef;
+				border: solid 1px #e8e8e8;
+				overflow: hidden;
+			}
+
+
+
+			.card-block-title {
+				text-align: center;
+				margin-left: 40px;
+				padding: 20px;
+			}
+
+
+			.text-card{
 				margin-top: 150px;
 			}
-			.text-card1{
 
+			.text-card1{
 				padding: 20px;
 				font-size: 25px;
 				text-align: center;
@@ -49,15 +92,16 @@
 				margin-left: 270px;
 				margin-right: -260px;
 			}
+
 		 	h1.tanya{
 				margin-left: auto;
 				font-size: 40px;
 				margin-top: 15px ;
 			}
+
 			img.kok{
 				margin-top: -45px;
 			}
-	
 			</style>
 	</head>
 	<body>
@@ -109,11 +153,11 @@
 					</section>
 				</section>
       
-      			<section data-transition="zoom"  data-background-color="rgb(40, 46, 239)">
+      			<section data-transition="zoom"  data-background-color="rgb(255, 60, 0)">
 					<section>
 						<h1 class="tanya"  style="text-shadow: 5px 7px 4px black">Kelebihan dan kekurangan framework Svelte</h1>
 					</section>
-					<section  data-background-color="rgb(40, 46, 239)">
+					<section  data-background-color="rgb(255, 60, 0)">
 						<h2>Kelebihan</h2>
 						<ol>
 							<li>
@@ -149,7 +193,7 @@
 					</section>
 				</section>
 
-				<section data-transition="zoom"  data-background-color="rgb(40, 46, 239)">
+				<section data-transition="zoom"  data-background-color="rgb(255, 60, 0)">
 					<section>
 						<h1 class="tanya"  style="text-shadow: 5px 7px 4px black">Kapan Menggunakan Svelte?</h1>
 						<p class="fragment fade-up" style="color:white;">
@@ -159,6 +203,57 @@
 							Svelte juga merupakan pilihan terbaik bagi pemula mengingat aturan kode yang minimalis.
 						</p>
 					</section>
+				</section>
+
+				<section class="size" data-background-color="rgb(255, 60, 0)" data-transition="zoom">
+					<div class="cards">
+						<div class="card-block" >
+							<section data-auto-animate>
+								<h5 data-id="code-title" class="card-block-title">Counter Menggunakan <br>Svelte</h5>
+								<pre data-id="code-animation">
+									<code class="code-block" data-trim data-line-numbers="|4,8-11|17|22-24">
+										<script>
+											let count = 0;
+											
+											function handleClick() {
+												count += 1;
+											}
+										</script>
+							
+										<button on:click={handleClick}>
+											clicks: {count}
+										</button>
+									</code>
+								</pre>
+							</section>
+						</div>
+						<div class="card-block">
+							<section data-auto-animate>
+								<h5 data-id="code-title" class="card-block-title">Counter Menggunakan <br>React</h5>
+								<pre data-id="code-animation">
+									<code class="code-block" data-trim data-line-numbers="|4,8-11|17|22-24">
+										<script type="text/template">
+										import React, { useState } from 'react';
+
+										function Counter() {
+											const [count, setCount] = useState(0);
+
+											return (
+												<div>
+												<p>You clicked {count} times</p>
+												<button onClick={() => setCount(count + 1)}>
+													Click me
+												</button>
+												</div>
+											);
+										}
+										</script>
+									</code>
+								</pre>
+							</section>
+							
+						</div>
+					</div>
 				</section>
 
 			</div>
